@@ -1,6 +1,6 @@
 import streamlit
 
-
+streamlit.title("My Parent's New Healthy Diner")
 
 streamlit.header('Breakfast Favourites')
 streamlit.text('🥣  Omega 3 & Blueberry Oatmeal')
@@ -24,5 +24,12 @@ streamlit.dataframe(fruits_to_show )
 #New Section to display fruitvice api response
 streamlit.header('Fruityvice Fruit Advice!')
 
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response.json())
 
+#The below line of code flattens the json fruityvice_response data
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+#outputs fruityvice_normalized data code above to the streamlit output window.
+streamlit.dataframe(fruityvice_normalized)
 
