@@ -27,7 +27,7 @@ fruit_choice=streamlit.text_input('What fruit would like information about?', 'K
 streamlit.write=('The user entered', fruit_choice)
 
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
 
 #The below line of code flattens the json fruityvice_response data
