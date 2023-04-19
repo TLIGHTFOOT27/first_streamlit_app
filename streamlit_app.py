@@ -38,7 +38,7 @@ try:
     streamlit.dataframe(fruityvice_normalized)
 
 except:
-     streamlit.print("This fruit does not exist")
+     streamlit.text("This fruit does not exist")
 #    streamlit.error()
 
 
