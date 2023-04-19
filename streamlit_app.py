@@ -38,8 +38,9 @@ try:
     streamlit.dataframe(fruityvice_normalized)
 
 except URLError as e:
+     streamlit.print("This fruit does not exist")
 #    streamlit.error()
-    print("This fruit does not exist")
+
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
