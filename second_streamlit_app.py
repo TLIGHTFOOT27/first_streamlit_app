@@ -8,6 +8,7 @@ with my_cnx.cursor() as my_cur:
          my_sweatshirt_list=my_cur.execute("select $1 as style from ZENAS_ATHLEISURE_DB.PRODUCTS.SWEATSUITS")   
          my_cnx.close()
  
+streamlit.dataframe(my_sweatshirt_list)
 my_sweatshirt_list=my_sweatshirt_list.setindex('style')
          
 fruits_selected=streamlit.multiselect("Pick a sweatsuit color or style:", list(my_sweatshirt_list.index))
