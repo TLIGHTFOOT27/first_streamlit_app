@@ -13,7 +13,7 @@ my_catalog = my_cur.fetchall()
 df=pandas.DataFrame(my_catalog)
 streamlit.write(df)
 
-color_list=df[0].list
+color_list=df[0].tolist()
 
 selected=streamlit.selectbox("Pick a sweatsuit color or style:", list(color_list))
 streamlit.dataframe(selected)
