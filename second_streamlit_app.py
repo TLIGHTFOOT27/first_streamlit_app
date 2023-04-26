@@ -11,7 +11,7 @@ my_cur.execute("select color_or_style from ZENAS_ATHLEISURE_DB.PRODUCTS.CATALOG_
 my_catalog = my_cur.fetchall()
 
 df=pandas.DataFrame(my_catalog)
-streamlit.write(df)
+#streamlit.write(df)
 
 color_list=df[0].tolist()
 
