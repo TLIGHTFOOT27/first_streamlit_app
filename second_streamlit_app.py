@@ -10,7 +10,7 @@ my_cur = my_cnx.cursor()
 my_cur.execute("select color_or_style from ZENAS_ATHLEISURE_DB.PRODUCTS.CATALOG_FOR_WEBSITE")   
 my_catalog = my_cur.fetchall()
 
-df=dataframe(my_catalog)
+df=pandas.dataframe(my_catalog)
 streamlit.write(df)
 
 #color_list=
