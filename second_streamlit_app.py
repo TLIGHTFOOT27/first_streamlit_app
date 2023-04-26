@@ -10,7 +10,7 @@ with my_cnx.cursor() as my_cur:
          my_cnx.close()
  
 streamlit.dataframe(my_sweatshirt_list)
-my_sweatshirt_list=my_sweatshirt_list.set_index('style')
+my_sweatshirt_list=my_sweatshirt_list.set_index('0')
          
 fruits_selected=streamlit.multiselect("Pick a sweatsuit color or style:", list(my_sweatshirt_list))
 streamlit.dataframe(fruits_selected)
