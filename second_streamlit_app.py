@@ -1,3 +1,3 @@
 import Streamlit
 
-streamlit.title('Zenas Amazing Athleisure Catalog')
+streamlit.title("Zenas Amazing Athleisure Catalog")
